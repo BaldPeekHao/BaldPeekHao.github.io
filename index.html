@@ -1,45 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07090d" />
+  <meta name="description" content="Portfolio of Tuong Hao Truong — AI & Software Developer building healthcare AI, e-commerce and hospitality products." />
+  <meta property="og:title" content="Tuong Hao Truong — AI & Software Developer" />
+  <meta property="og:description" content="Three flagship systems: AI Milly, Aladin, and Hoa Vien Phuong Nam." />
+  <meta property="og:type" content="website" />
+  <title>Tuong Hao Truong — AI & Software Developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+  <script defer src="app.js"></script>
 </head>
 <body>
-    <img src="icon/RMIT LOGOOOOGOGOGOGGOGOG.png" width=300 alt="RMIT LOGO"><br>
-    <br>
-    <hr>
-    <br>
-<img src="icon/profilepic.png" width="300" alt="Profile Picture">
-<h1> Trương Tường Hạo </h1>
-<p><strong> |&#127891;Bachelor of Information of Technology| </strong></p>
-<p><em>Hi guys, I'm<strong> Hao Cheung</strong>. Nice to see you guys and hope you guys doing well at this sem! &#128525; </i></em></p>
-<hr>
-<h2>🎬 My Hobbies : </h2>
-<ul>
-    <li>Swimming &#127946; </li>
-    <li>Video Games &#127918;</li>
-    <li>Travel &#9992;</li>
-</ul> 
-<h2> ⌨ Languages : </h2>
-<ul>
-    <li> HTML | CSS <img src="icon/Css logo.png" width="20" alt=""> </li>
-    <li>Python <img src="icon/python emoji.svg" width="25" alt=""> </li>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-</ul> 
-<h2> 💎 My Social Skill : </h2>
-<ul>
-    <li> Teamwork &#11088;&#11088;&#11088; </li>
-    <li> Empathy &#11088;&#11088;&#11088;&#11088;&#11088;</li>
-    <li> Active listeing &#11088;&#11088;</li>
-</ul>
-<h2><strong>Connect with Me : </strong></h2>
-<a href="https://www.facebook.com/profile.php?id=100015989019950" target="_blank"><img src="icon/facebook (1).png" alt=""></a><p>Click to the icon please!</p>
-<br>
-<a href="https://chat.zalo.me/" target="_blank"><img src="icon/zalo.png" alt=""></a><p>Click to the icon please!</p>
-<br>
-<a href="https://steamcommunity.com/id/L0VEYOUALL/" target="_blank"><img src="icon/steam.png" alt=""></a><p>Click to the icon please!</p>
-<br>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">TH</span>
+      <span class="brand-copy">
+        <strong data-config="name">Tuong Hao Truong</strong>
+        <small>AI / SOFTWARE</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#work">Selected work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="ghost-link github-link" href="https://github.com/BaldPeekHao" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow reveal"><span></span> Melbourne · AI & software engineering</div>
+        <h1 id="hero-title" class="reveal delay-1">
+          I build systems<br />
+          <span class="outline">people can actually use.</span>
+        </h1>
+        <p class="hero-lead reveal delay-2">
+          <strong data-config="name">Tuong Hao Truong</strong> — Master of Artificial Intelligence at RMIT University. I turn technical problems into polished, user-facing products across healthcare AI, commerce and hospitality.
+        </p>
+        <div class="hero-actions reveal delay-3">
+          <a class="primary-cta magnetic" href="#work">Explore the work <span>↓</span></a>
+          <a class="text-cta github-link" href="https://github.com/BaldPeekHao" target="_blank" rel="noreferrer">Open GitHub profile ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-system reveal delay-2" aria-label="Portfolio project map">
+        <div class="orbital-wrap">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <button class="project-node node-milly" data-scroll-to="milly" aria-label="Jump to AI Milly">
+            <span class="node-index">01</span>
+            <strong>AI Milly</strong>
+            <small>Healthcare AI</small>
+          </button>
+          <button class="project-node node-aladin" data-scroll-to="aladin" aria-label="Jump to Aladin">
+            <span class="node-index">02</span>
+            <strong>Aladin</strong>
+            <small>E-commerce</small>
+          </button>
+          <button class="project-node node-southern" data-scroll-to="southern" aria-label="Jump to Hoa Vien Phuong Nam">
+            <span class="node-index">03</span>
+            <strong>Phương Nam</strong>
+            <small>Hospitality</small>
+          </button>
+          <div class="orbit-core">
+            <span>TH</span>
+            <small>build / ship / learn</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-meta reveal delay-3">
+        <div><span>03</span><small>flagship systems</small></div>
+        <div><span>AI → UI</span><small>end-to-end thinking</small></div>
+        <div><span>2026</span><small>portfolio edition</small></div>
+      </div>
+    </section>
+
+    <section class="manifesto section-shell">
+      <div class="manifesto-kicker">A portfolio should not be a folder of screenshots.</div>
+      <p class="manifesto-line reveal-text">It should feel like the products themselves.</p>
+    </section>
+
+    <section id="work" class="work-intro section-shell">
+      <div class="section-label">Selected systems / 01—03</div>
+      <div>
+        <h2>Three projects.<br><span>Three different kinds of engineering.</span></h2>
+        <p>Each case study below contains an interactive, portfolio-safe product simulation. It mirrors the original product language without exposing credentials, production data or backend services.</p>
+      </div>
+    </section>
+
+    <!-- AI MILLY -->
+    <section id="milly" class="project project-milly" data-accent="milly">
+      <div class="project-bg project-bg-milly" aria-hidden="true"></div>
+      <div class="project-shell section-shell">
+        <div class="project-head">
+          <div class="project-number">01</div>
+          <div class="project-title-wrap">
+            <div class="project-overline">Healthcare AI · Capstone team product</div>
+            <h2>AI Milly</h2>
+            <p class="project-subtitle">A medically attuned, real-time interpreter designed around emergency-department communication.</p>
+          </div>
+          <div class="project-year">AI / 2026</div>
+        </div>
+
+        <div class="project-layout milly-layout">
+          <div class="case-copy">
+            <div class="case-block">
+              <span class="case-label">Problem</span>
+              <p>When a clinician and patient do not share a language, every extra interaction costs time and can reduce understanding. Milly turns a two-way conversation into a live bilingual exchange.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-label">Engineering</span>
+              <p>The original app captures 16 kHz mono PCM audio in the browser, streams it over Socket.IO, runs a Gemini live speech pipeline, returns translated text and queues text-to-speech output.</p>
+            </div>
+            <div class="tech-row">
+              <span>React</span><span>Ionic</span><span>TypeScript</span><span>Express</span><span>Socket.IO</span><span>Gemini</span><span>Google Cloud</span>
+            </div>
+            <div class="architecture" aria-label="Milly architecture">
+              <div><b>01</b><span>Browser audio</span><small>PCM · 16 kHz</small></div>
+              <i>→</i>
+              <div><b>02</b><span>Realtime socket</span><small>streaming session</small></div>
+              <i>→</i>
+              <div><b>03</b><span>AI pipeline</span><small>STT · translate</small></div>
+              <i>→</i>
+              <div><b>04</b><span>Voice return</span><small>TTS playback</small></div>
+            </div>
+          </div>
+
+          <div class="demo-stage milly-demo" data-demo="milly">
+            <div class="demo-caption"><span class="live-dot"></span> INTERACTIVE PRODUCT SIMULATION <small>No microphone data is sent</small></div>
+            <div class="phone-frame">
+              <div class="phone-speaker"></div>
+              <div class="milly-screen milly-screen-home is-active" data-milly-screen="home">
+                <div class="milly-top-shape"></div>
+                <div class="milly-mini-brand">AI MILLY / ED INTERPRETER</div>
+                <h3>Say hello to<br><span>AI Milly.</span></h3>
+                <img src="assets/milly/landing.png" alt="Illustration from the AI Milly application" />
+                <p>Bridge language gaps with real-time, medically attuned translation.</p>
+                <button class="milly-primary" data-milly-next="language">Start</button>
+              </div>
+
+              <div class="milly-screen" data-milly-screen="language">
+                <div class="milly-mini-brand">SESSION SETUP</div>
+                <h3>Select patient language</h3>
+                <p>Clinician side remains English (AU).</p>
+                <div class="language-grid">
+                  <button data-lang="Mandarin" data-phrase="我胸口很痛，而且呼吸困难。"><img src="assets/milly/cn.png" alt=""><span>Mandarin</span></button>
+                  <button data-lang="Cantonese" data-phrase="我個胸口好痛，呼吸都好困難。"><img src="assets/milly/cn.png" alt=""><span>Cantonese</span></button>
+                  <button data-lang="Spanish" data-phrase="Me duele mucho el pecho y me cuesta respirar."><img src="assets/milly/es.png" alt=""><span>Spanish</span></button>
+                  <button data-lang="Hindi" data-phrase="मेरे सीने में बहुत दर्द है और सांस लेने में कठिनाई हो रही है।"><img src="assets/milly/in.png" alt=""><span>Hindi</span></button>
+                </div>
+                <button class="milly-mic" data-milly-record disabled aria-label="Start simulated translation"><span></span></button>
+                <small class="milly-hint">Select a language, then tap the microphone.</small>
+                <button class="demo-back" data-milly-next="home">← Intro</button>
+              </div>
+
+              <div class="milly-screen" data-milly-screen="live">
+                <div class="milly-live-head"><span><i></i> LIVE SESSION</span><b data-milly-lang>Spanish</b></div>
+                <div class="conversation patient-side">
+                  <small>PATIENT · TRANSCRIPT</small>
+                  <em data-patient-original>Me duele mucho el pecho y me cuesta respirar.</em>
+                  <p>I have severe chest pain and I am having difficulty breathing.</p>
+                </div>
+                <div class="waveform" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="conversation clinician-side">
+                  <small>CLINICIAN · ENGLISH (AU)</small>
+                  <em>When did the pain start?</em>
+                  <p data-clinician-translation>¿Cuándo comenzó el dolor?</p>
+                </div>
+                <button class="stop-session" data-milly-next="language"><span>■</span> End simulated session</button>
+              </div>
+            </div>
+            <div class="demo-instruction">Try it: <b>Start → choose a language → tap the mic.</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALADIN -->
+    <section id="aladin" class="project project-aladin" data-accent="aladin">
+      <div class="project-bg project-bg-aladin" aria-hidden="true"></div>
+      <div class="project-shell section-shell">
+        <div class="project-head">
+          <div class="project-number">02</div>
+          <div class="project-title-wrap">
+            <div class="project-overline">Full-stack commerce · Academic team product</div>
+            <h2>Aladin</h2>
+            <p class="project-subtitle">A multi-role e-commerce system connecting customers, vendors and shippers across the same order lifecycle.</p>
+          </div>
+          <div class="project-year">WEB / FULL STACK</div>
+        </div>
+
+        <div class="project-layout aladin-layout">
+          <div class="demo-stage aladin-demo" data-demo="aladin">
+            <div class="demo-caption"><span class="live-dot orange"></span> ROLE-SWITCHING COMMERCE DEMO <small>Local simulation only</small></div>
+            <div class="browser-frame">
+              <div class="browser-chrome">
+                <div class="traffic"><i></i><i></i><i></i></div>
+                <div class="address">aladin / commerce-system</div>
+                <div class="cart-pill">CART <b data-cart-count>0</b></div>
+              </div>
+              <div class="aladin-app">
+                <aside class="aladin-side">
+                  <div class="aladin-logo"><img src="assets/aladin/logo.png" alt="Aladin logo from the original project"><span>ALADIN</span></div>
+                  <small>VIEW AS</small>
+                  <button class="role-btn is-active" data-role="customer">Customer</button>
+                  <button class="role-btn" data-role="vendor">Vendor</button>
+                  <button class="role-btn" data-role="shipper">Shipper</button>
+                  <div class="side-note">One database.<br>Three operational views.</div>
+                </aside>
+
+                <div class="aladin-view is-active" data-role-view="customer">
+                  <div class="shop-hero">
+                    <div>
+                      <small>FEATURED DROP / 02</small>
+                      <h3>Neon Orange<br>Clear Strap Boots</h3>
+                      <button class="shop-now" data-add-cart="hero">Add to cart</button>
+                    </div>
+                    <img src="assets/aladin/hero.png" alt="Orange boots from the original Aladin storefront">
+                  </div>
+                  <div class="shop-toolbar"><span>Hot products</span><div><button class="filter-chip is-active">All</button><button class="filter-chip">Fashion</button><button class="filter-chip">Tech</button></div></div>
+                  <div class="product-grid">
+                    <article><img src="assets/aladin/product1.jpg" alt="Product"><small>FASHION</small><b>Statement Essential</b><span>$89</span><button data-add-cart>Add +</button></article>
+                    <article><img src="assets/aladin/product7.jpg" alt="Product"><small>ELECTRONICS</small><b>Daily Tech</b><span>$129</span><button data-add-cart>Add +</button></article>
+                    <article><img src="assets/aladin/product10.jpg" alt="Product"><small>HOME</small><b>Modern Living</b><span>$64</span><button data-add-cart>Add +</button></article>
+                  </div>
+                </div>
+
+                <div class="aladin-view" data-role-view="vendor">
+                  <div class="workspace-head"><div><small>VENDOR CONSOLE</small><h3>Inventory & orders</h3></div><button>+ Add product</button></div>
+                  <div class="metric-grid"><div><small>ACTIVE PRODUCTS</small><b>42</b><span>+6 this month</span></div><div><small>OPEN ORDERS</small><b>18</b><span>5 need action</span></div><div><small>FULFILMENT</small><b>94%</b><span>on-time</span></div></div>
+                  <div class="data-table">
+                    <div class="table-row table-head"><span>PRODUCT</span><span>STOCK</span><span>PRICE</span><span>STATUS</span></div>
+                    <div class="table-row"><span><img src="assets/aladin/product3.jpg" alt="">Core Collection</span><span>18</span><span>$72</span><span><i class="status-dot"></i> Live</span></div>
+                    <div class="table-row"><span><img src="assets/aladin/product6.jpg" alt="">Home Edition</span><span>05</span><span>$110</span><span><i class="status-dot warn"></i> Low</span></div>
+                    <div class="table-row"><span><img src="assets/aladin/product8.jpg" alt="">Studio Series</span><span>31</span><span>$49</span><span><i class="status-dot"></i> Live</span></div>
+                  </div>
+                </div>
+
+                <div class="aladin-view" data-role-view="shipper">
+                  <div class="workspace-head"><div><small>SHIPPER HUB</small><h3>Distribution queue</h3></div><span class="hub-tag">CAT LAI TERMINAL</span></div>
+                  <div class="route-map">
+                    <div class="route-line"></div>
+                    <span class="route-point p1"><i></i><b>Hub</b><small>08:30</small></span>
+                    <span class="route-point p2"><i></i><b>District 1</b><small>09:12</small></span>
+                    <span class="route-point p3"><i></i><b>District 5</b><small>10:05</small></span>
+                    <span class="route-point p4"><i></i><b>Complete</b><small>12:40 ETA</small></span>
+                  </div>
+                  <div class="delivery-list">
+                    <div><span>#ALD-2048</span><b>Nguyen Van A</b><small>Cash on Delivery</small><button data-delivery>Mark delivered</button></div>
+                    <div><span>#ALD-2051</span><b>Tran Minh K</b><small>Internet Banking</small><button data-delivery>Mark delivered</button></div>
+                    <div><span>#ALD-2057</span><b>Le Thanh P</b><small>Cash on Delivery</small><button data-delivery>Mark delivered</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="demo-instruction">Try it: <b>switch Customer / Vendor / Shipper.</b> In Customer view, add products to the cart.</div>
+          </div>
+
+          <div class="case-copy">
+            <div class="case-block">
+              <span class="case-label">System design</span>
+              <p>Aladin models three user types on top of a shared commerce domain: customer browsing and cart flows, vendor inventory management, and shipper fulfilment by distribution hub.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-label">Backend</span>
+              <p>Node.js + Express serves EJS views and MongoDB-backed models for users, products and orders. Password handling uses bcrypt, while search is supported through a MongoDB text index.</p>
+            </div>
+            <div class="tech-row orange-tech">
+              <span>Node.js</span><span>Express</span><span>EJS</span><span>MongoDB</span><span>Mongoose</span><span>Bootstrap</span><span>bcrypt</span>
+            </div>
+            <div class="security-callout"><b>Shared commerce domain</b><span>Customer purchases become vendor orders and shipper fulfilment tasks, keeping three role-specific interfaces connected to the same underlying product and order models.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOUTHERN PARK -->
+    <section id="southern" class="project project-southern" data-accent="southern">
+      <div class="project-bg project-bg-southern" aria-hidden="true"></div>
+      <div class="project-shell section-shell">
+        <div class="project-head">
+          <div class="project-number">03</div>
+          <div class="project-title-wrap">
+            <div class="project-overline">Hospitality platform · Customer + operations</div>
+            <h2>Hoa Viên Phương Nam</h2>
+            <p class="project-subtitle">A restaurant platform that joins a premium customer experience with reservations, events, inventory, media and admin operations.</p>
+          </div>
+          <div class="project-year">REACT / PRODUCT</div>
+        </div>
+
+        <div class="project-layout southern-layout">
+          <div class="case-copy">
+            <div class="case-block">
+              <span class="case-label">Product scope</span>
+              <p>The codebase spans public menu discovery, multi-step table reservation, event / wedding booking, a media forum, user accounts and an admin control surface.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-label">Operations</span>
+              <p>Admin workflows cover menu items, set menus, reservations, events, inventory, categories, promotional media and restaurant settings — with role-aware navigation and animated transitions.</p>
+            </div>
+            <div class="tech-row red-tech">
+              <span>React</span><span>Vite</span><span>Tailwind</span><span>Framer Motion</span><span>Radix UI</span><span>Recharts</span>
+            </div>
+            <div class="scope-matrix">
+              <span>Menu</span><span>Reservations</span><span>Event booking</span><span>Inventory</span><span>Categories</span><span>Media</span><span>Settings</span><span>Admin stats</span>
+            </div>
+          </div>
+
+          <div class="demo-stage southern-demo" data-demo="southern">
+            <div class="demo-caption"><span class="live-dot red"></span> RESTAURANT OPERATIONS DEMO <small>Simulated booking flow</small></div>
+            <div class="restaurant-frame">
+              <div class="restaurant-nav">
+                <div class="hv-brand"><span>HV</span><div><b>HOA VIÊN PHƯƠNG NAM</b><small>Ẩm thực Châu Đốc</small></div></div>
+                <div class="restaurant-tabs">
+                  <button class="rest-tab is-active" data-rest-tab="booking">Đặt bàn</button>
+                  <button class="rest-tab" data-rest-tab="menu">Thực đơn</button>
+                  <button class="rest-tab" data-rest-tab="admin">Quản lý</button>
+                </div>
+              </div>
+
+              <div class="rest-view is-active" data-rest-view="booking">
+                <div class="rest-page-title"><small>RESERVATION FLOW</small><h3>Đặt Bàn</h3><p>Trải nghiệm quy trình đặt bàn nhiều bước, mô phỏng trực tiếp từ sản phẩm.</p></div>
+                <div class="stepper booking-stepper" aria-label="Reservation progress">
+                  <span class="is-active" data-step-dot="1">1</span><i></i><span data-step-dot="2">2</span><i></i><span data-step-dot="3">3</span><i></i><span data-step-dot="4">4</span>
+                </div>
+
+                <div class="booking-step-panel is-active" data-booking-step="1">
+                  <div class="booking-step-heading"><small>STEP 01</small><b>Chọn không gian</b><span>Chọn khu vực phù hợp với buổi gặp của bạn.</span></div>
+                  <div class="table-choice-grid">
+                    <button class="table-choice is-active" data-table-type="regular"><small>01</small><b>Bàn thường</b><span>Không gian nhà hàng chính · thoáng và gần sân khấu.</span><em>Standard</em></button>
+                    <button class="table-choice" data-table-type="vip"><small>02</small><b>Phòng VIP</b><span>Không gian riêng · karaoke · phục vụ chuyên biệt.</span><em>Premium</em></button>
+                  </div>
+                </div>
+
+                <div class="booking-step-panel" data-booking-step="2">
+                  <div class="booking-step-heading"><small>STEP 02</small><b>Thời gian & số khách</b><span>Chọn lịch và quy mô bàn trong vài thao tác.</span></div>
+                  <div class="booking-options-grid">
+                    <div class="booking-option-card">
+                      <small>NGÀY</small>
+                      <div class="choice-chips" data-choice-group="date">
+                        <button class="is-active" data-booking-date="Tối nay">Tối nay</button><button data-booking-date="Ngày mai">Ngày mai</button><button data-booking-date="Cuối tuần">Cuối tuần</button>
+                      </div>
+                    </div>
+                    <div class="booking-option-card">
+                      <small>GIỜ</small>
+                      <div class="choice-chips" data-choice-group="time">
+                        <button data-booking-time="18:30">18:30</button><button class="is-active" data-booking-time="19:30">19:30</button><button data-booking-time="20:30">20:30</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guest-control"><div><small>SỐ KHÁCH</small><b>Quy mô bàn</b></div><div class="guest-stepper"><button data-guest-minus>−</button><strong data-guest-count>4</strong><button data-guest-plus>+</button></div></div>
+                </div>
+
+                <div class="booking-step-panel" data-booking-step="3">
+                  <div class="booking-step-heading"><small>STEP 03</small><b>Cá nhân hoá trải nghiệm</b><span>Thêm dịp đặc biệt và yêu cầu để đội ngũ chuẩn bị trước.</span></div>
+                  <div class="occasion-grid" data-choice-group="occasion">
+                    <button class="is-active" data-booking-occasion="Bữa tối gia đình"><span>✦</span><b>Gia đình</b><small>Ấm cúng & thoải mái</small></button>
+                    <button data-booking-occasion="Sinh nhật"><span>◇</span><b>Sinh nhật</b><small>Trang trí bàn nhẹ</small></button>
+                    <button data-booking-occasion="Tiếp khách"><span>◆</span><b>Tiếp khách</b><small>Không gian chỉn chu</small></button>
+                  </div>
+                  <label class="request-field"><small>GHI CHÚ</small><span data-booking-note contenteditable="true" role="textbox" aria-label="Special request">Bàn yên tĩnh, ưu tiên gần cửa sổ.</span></label>
+                </div>
+
+                <div class="booking-step-panel" data-booking-step="4">
+                  <div class="booking-confirm-hero">
+                    <div><small>STEP 04 · REVIEW</small><h4>Sẵn sàng xác nhận.</h4><p>Một summary rõ ràng trước khi gửi yêu cầu đặt bàn.</p></div>
+                    <span class="confirm-mark">✓</span>
+                  </div>
+                  <div class="booking-summary">
+                    <div><small>KHÔNG GIAN</small><b data-summary-table>Bàn thường</b></div>
+                    <div><small>THỜI GIAN</small><b data-summary-time>Tối nay · 19:30</b></div>
+                    <div><small>SỐ KHÁCH</small><b data-summary-guests>4 khách</b></div>
+                    <div><small>DỊP</small><b data-summary-occasion>Bữa tối gia đình</b></div>
+                  </div>
+                  <button class="confirm-booking" data-booking-confirm>Xác nhận yêu cầu <span>→</span></button>
+                </div>
+
+                <div class="booking-bottom booking-nav-bottom">
+                  <div><small>YOUR SELECTION</small><b data-booking-selection>Bàn thường · Tối nay · 19:30 · 4 khách</b></div>
+                  <div class="booking-nav-actions"><button class="booking-back" data-booking-back disabled>← Quay lại</button><button data-booking-next>Tiếp tục →</button></div>
+                </div>
+              </div>
+
+              <div class="rest-view" data-rest-view="menu">
+                <div class="menu-hero-row">
+                  <div class="rest-page-title compact"><small>CURATED MENU</small><h3>Thực Đơn</h3><p>Khám phá món ăn qua một menu trực quan, giàu hình ảnh và có thể lọc theo nhóm.</p></div>
+                  <div class="menu-mini-stat"><small>CHEF'S SELECTION</small><b>06</b><span>signature dishes</span></div>
+                </div>
+                <div class="menu-categories" data-menu-filters>
+                  <button class="is-active" data-menu-filter="all">Nổi bật</button><button data-menu-filter="starter">Khai vị</button><button data-menu-filter="main">Món chính</button><button data-menu-filter="hotpot">Lẩu</button><button data-menu-filter="dimsum">Dimsum</button>
+                </div>
+                <div class="dish-grid enhanced-dish-grid">
+                  <article data-menu-cat="main" tabindex="0"><div class="dish-photo"><img src="https://images.unsplash.com/photo-1645351144202-15f183e316a2?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=78&amp;w=800" alt="Grilled fish dish" loading="lazy" onerror="this.style.display='none'"><span>Signature</span></div><div class="dish-copy"><small>MÓN CHÍNH · CÁ</small><b>Cá lóc nướng trui</b><p>Cá nướng thơm, rau sống và nước chấm kiểu miền Tây.</p><strong>245.000đ</strong></div></article>
+                  <article data-menu-cat="hotpot" tabindex="0"><div class="dish-photo"><img src="https://images.unsplash.com/photo-1769865399483-1af590633176?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=78&amp;w=800" alt="Hot pot ingredients" loading="lazy" onerror="this.style.display='none'"><span>For sharing</span></div><div class="dish-copy"><small>LẨU</small><b>Lẩu mắm Phương Nam</b><p>Rau, nấm và nguyên liệu tươi cho trải nghiệm dùng chung.</p><strong>520.000đ</strong></div></article>
+                  <article data-menu-cat="starter" tabindex="0"><div class="dish-photo"><img src="https://images.unsplash.com/photo-1515022376298-7333f33e704b?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=78&amp;w=800" alt="Crispy spring rolls" loading="lazy" onerror="this.style.display='none'"><span>Crispy</span></div><div class="dish-copy"><small>KHAI VỊ</small><b>Chả giò hải sản</b><p>Giòn nhẹ, nhân đậm vị và nước chấm chua ngọt.</p><strong>135.000đ</strong></div></article>
+                  <article data-menu-cat="dimsum" tabindex="0"><div class="dish-photo"><img src="https://images.unsplash.com/photo-1756367201317-3d1494092529?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=78&amp;w=800" alt="Dim sum in bamboo steamer" loading="lazy" onerror="this.style.display='none'"><span>Steamed</span></div><div class="dish-copy"><small>DIMSUM</small><b>Há cảo tôm</b><p>Vỏ mỏng, nhân tôm mọng và rau xanh thanh vị.</p><strong>118.000đ</strong></div></article>
+                  <article data-menu-cat="main" tabindex="0"><div class="dish-photo"><img src="https://images.unsplash.com/photo-1772729440931-e8efd3adc748?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=78&amp;w=800" alt="Fried rice with vegetables" loading="lazy" onerror="this.style.display='none'"><span>Popular</span></div><div class="dish-copy"><small>MÓN CHÍNH · CƠM</small><b>Cơm chiên hải sản</b><p>Cơm rang hạt rời, rau củ và topping hải sản.</p><strong>185.000đ</strong></div></article>
+                  <article data-menu-cat="main" tabindex="0"><div class="dish-photo"><img src="https://images.unsplash.com/photo-1769065647050-3bd080f6c3e1?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=78&amp;w=800" alt="Crispy seafood dish" loading="lazy" onerror="this.style.display='none'"><span>Chef pick</span></div><div class="dish-copy"><small>MÓN CHÍNH · HẢI SẢN</small><b>Hải sản sốt chua ngọt</b><p>Lớp vỏ giòn, sốt cân bằng vị ngọt, chua và thơm.</p><strong>295.000đ</strong></div></article>
+                </div>
+                <div class="menu-footer-line"><span><i></i> Ảnh món ăn dùng cho portfolio demo</span><b data-menu-count>06 món đang hiển thị</b></div>
+              </div>
+
+              <div class="rest-view" data-rest-view="admin">
+                <div class="workspace-head rest-admin-head"><div><small>ADMIN CONTROL</small><h3>Quản lý nhà hàng</h3></div><span class="admin-badge">ADMIN</span></div>
+                <div class="admin-tabs"><button class="is-active">Thực đơn</button><button>Đặt bàn</button><button>Tiệc</button><button>Kho</button><button>Media</button></div>
+                <div class="restaurant-metrics"><div><small>RESERVATIONS</small><b>24</b><span>today</span></div><div><small>MENU ITEMS</small><b>86</b><span>active</span></div><div><small>LOW STOCK</small><b>07</b><span>needs review</span></div><div><small>EVENTS</small><b>05</b><span>upcoming</span></div></div>
+                <div class="inventory-panel">
+                  <div><b>Inventory health</b><span>Live operational surface</span></div>
+                  <div class="inventory-bars"><span><i style="--w:88%"></i><small>Fresh produce</small><b>88%</b></span><span><i style="--w:61%"></i><small>Seafood</small><b>61%</b></span><span><i style="--w:34%"></i><small>Beverages</small><b>34%</b></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="demo-instruction">Try it: <b>complete the 4-step Booking flow</b>, filter the photo-rich Menu, or switch into Admin.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell">
+      <div class="section-label">About / approach</div>
+      <div class="about-grid">
+        <div>
+          <h2>I care about the layer where <span>engineering meets experience.</span></h2>
+          <p>My strongest work sits between backend logic, AI capability and the UI a real person touches. I enjoy taking a technically complicated system and making the interaction feel simple, deliberate and trustworthy.</p>
+        </div>
+        <div class="principles">
+          <article><span>01</span><h3>Build the system</h3><p>Understand data, APIs, state and failure modes — not only screens.</p></article>
+          <article><span>02</span><h3>Design the interaction</h3><p>Make complexity legible through hierarchy, motion and feedback.</p></article>
+          <article><span>03</span><h3>Ship responsibly</h3><p>Keep credentials, private data and production dependencies out of public demos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell">
+      <div class="contact-orb" aria-hidden="true"></div>
+      <div class="section-label">Next / conversation</div>
+      <h2>Looking for someone who can move from <span>AI pipeline</span> to <span>product UI</span>?</h2>
+      <p>I’m building toward AI / software engineering roles where product thinking matters as much as implementation.</p>
+      <div class="contact-actions">
+        <a class="primary-cta github-link" href="https://github.com/BaldPeekHao" target="_blank" rel="noreferrer">Explore GitHub ↗</a>
+        <a class="primary-cta secondary hidden-by-config" data-config-link="linkedin" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="primary-cta secondary hidden-by-config" data-config-link="email">Email me ↗</a>
+        <a class="primary-cta secondary hidden-by-config" data-config-link="resume" target="_blank" rel="noreferrer">Résumé ↗</a>
+      </div>
+      <footer>
+        <span>Tuong Hao Truong</span>
+        <span>Master of Artificial Intelligence · RMIT University</span>
+        <span>Melbourne, Australia · <b data-current-year>2026</b></span>
+      </footer>
+    </section>
+  </main>
+
+  <aside class="project-rail" aria-label="Project position">
+    <a href="#milly" data-rail="milly" class="is-active"><span>01</span><i></i><b>MILLY</b></a>
+    <a href="#aladin" data-rail="aladin"><span>02</span><i></i><b>ALADIN</b></a>
+    <a href="#southern" data-rail="southern"><span>03</span><i></i><b>PHƯƠNG NAM</b></a>
+  </aside>
+
+  <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
